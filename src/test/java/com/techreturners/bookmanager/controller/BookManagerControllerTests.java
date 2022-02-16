@@ -119,6 +119,6 @@ public class BookManagerControllerTests {
                         .content(mapper.writeValueAsString(book)))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
-        verify(mockBookManagerServiceImpl, times(1)).deleteBookById(book.getId(),book);
+        verify(mockBookManagerServiceImpl, times(1)).deleteBookById(book.getId());
     }
 }
